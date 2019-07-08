@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="bandejaDeCamarero" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<value>Cubata</value>
+				<value>Cafe</value>
+				<value>Cenicero</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="cafelito" class="com.sopra.spring.ejemplo02spring.ej04.Cafe">
+		<property name="marca" value="Nescafé"/>
+		<property name="sabor" value="Amargo"/> 
+	</bean>
+	<bean id="cafeOle" class="com.sopra.spring.ejemplo02spring.ej04.Cafe">
+		<property name="marca" value="Hacendado"/>
+		<property name="sabor" value="Suave"/> 
+	</bean>
+	<bean id="mapaDeCafes" class="java.util.HashMap">
+		<constructor-arg >
+			<map 
+				key-type="java.lang.String"  
+				value-type="com.sopra.spring.ejemplo02spring.ej04.Cafe">
+				<entry key="nescafe" value-ref="cafelito"/>
+				<entry key="Hacendado" value-ref="cafeOle"/>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="puesUnSet" class="java.util.HashSet">
+		<constructor-arg>
+			<set>
+				<value>ferrari</value>
+				<value>porsche</value>
+				<value>tesla</value>
+			</set>
+		</constructor-arg>
+	</bean>
+</beans>
