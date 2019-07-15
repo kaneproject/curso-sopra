@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de armas</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th><th>Nombre</th><th>Calibre</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="arma : ${armas}">
+				<td th:text="${arma.id}" ></td>
+				<td th:text="${arma.nombre}" ></td>
+				<td th:text="${arma.calibre}" ></td>
+			</tr>
+		</tbody>
+	</table>
+	<a href th:href="@{/}">Nueva arma</a>
+</body>
+</html>

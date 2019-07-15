@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Alta de armas</title>
+</head>
+<body>
+	<form action="#" th:object="${arma}" th:action="@{/nuevaArma}">
+		<label for="id">Identificador</label>
+			<input type="text" th:field="*{id}" id="id"></br>
+		<label for="nombre">Nombre del arma</label>
+			<input type="text" th:field="*{nombre}" id="nombre"></br>
+		<label for="calibre">Calibre del arma</label>
+			<input type="text" th:field="*{calibre}" id="calibre"></br>
+		<input type="submit" value="Alta de nueva arma">
+	</form>
+	<a href="#" th:href="@{/listadoDeArmas}">Lista de armas</a>
+</body>
+</html>
