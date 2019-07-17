@@ -1,8 +1,14 @@
 spring:
   application:
     name: ejemplo10restJpa
-server:  port: 8810
+  datasource:
+    url: jdbc:mysql://mysql-server:3306/mysql
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create
 eureka:
   client:
     service-url:
-       defaultZone: http://localhost:8813/eureka/
+       defaultZone: http://eureka-server:8761/eureka/

@@ -1,8 +1,11 @@
 server:
-  port: 8813
-eureka:  instance:    hostname: localhost
+  port: 8761
+eureka:
+  instance:
+    hostname: eureka-server
   client:
     register-with-eureka: false
     fetch-registry: false 
     service-url: 
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka       
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka 
+      
