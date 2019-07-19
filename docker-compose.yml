@@ -16,6 +16,8 @@ services:
     depends_on:
       - mysql-server
       - eureka-server
+    ports:
+      - 8082:8080
   back-server-2:
     build: ./ejemplo10restJpa
     depends_on:
